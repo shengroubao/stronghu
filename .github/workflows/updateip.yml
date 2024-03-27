@@ -1,0 +1,19 @@
+name: Update IP Address
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 每天零点执行一次
+
+jobs:
+  update_ip:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Run PHP script
+        run: php /path/to/your/script.php
+
+visibility:
+  type: private
